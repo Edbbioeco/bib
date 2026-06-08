@@ -35,3 +35,9 @@ bibs |>
 bibs |>
   dplyr::select(BIBTEXKEY, AUTHOR, YEAR, TITLE, JOURNAL) |>
   dplyr::filter(YEAR |> stringr::str_detect(""))
+
+## Checar por título ----
+
+bibs |>
+  dplyr::select(BIBTEXKEY, AUTHOR, YEAR, TITLE, JOURNAL) |>
+  dplyr::filter(TITLE |> stringr::str_detect(""))
